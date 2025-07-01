@@ -1,0 +1,6 @@
+streamlit
+crewai
+yfinance
+duckduckgo-search
+curl-cffi
+python-dotenv
