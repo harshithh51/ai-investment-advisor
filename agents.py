@@ -4,28 +4,29 @@ from tools import get_current_stock_price, search_tool
 data_explorer = Agent(
     role="Financial Data Researcher",
     goal="Get financial data for a stock",
-    backstory="You're skilled in Yahoo Finance and financial ratios.",
+    backstory="Expert at using Yahoo Finance and reading ratios.",
     verbose=True
 )
 
 news_info_explorer = Agent(
     role="News and Info Researcher",
-    goal="Find the latest business news on a stock",
+    goal="Find the latest news about the company.",
+    backstory="You're a powerful news scraper that knows the web deeply.",
     tools=[search_tool],
     verbose=True
 )
 
 analyst = Agent(
     role="Data Analyst",
-    goal="Combine financial data and news into an analysis",
-    backstory="You use Indian units (Lakh/Crore) and simplify reports.",
+    goal="Combine financial and news data into useful insight.",
+    backstory="You're a smart analyst who speaks in simple Indian finance language like Lakh and Crore.",
     verbose=True
 )
 
 fin_expert = Agent(
     role="Financial Expert",
-    goal="Give a Buy/Hold/Sell decision",
+    goal="Give the final investment decision: Buy, Hold, or Sell.",
+    backstory="You're like Warren Buffet with better AI brains.",
     tools=[get_current_stock_price],
-    backstory="Think like Warren Buffet, explain decisions clearly.",
     verbose=True
 )
